@@ -8,6 +8,7 @@ package com;
 import com.modelo.Usuario;
 import com.util.Arquivo;
 import java.io.IOException;
+import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -16,31 +17,35 @@ import javafx.scene.control.TextField;
  *
  * @author kaiof
  */
-public class NovoUsuarioController {
-    @FXML
-    private TextField campoLogin;
-
-    @FXML
-    private TextField campoNome;
-
-    @FXML
-    private TextField campoSenha;
+public class AlterarCadastroController {
+    
     
     @FXML
-    private void cadastrarUsuario() throws IOException{
-        Usuario usuario = new Usuario();
-        usuario.setLogin(campoLogin.getText());
-        usuario.setNome(campoNome.getText());
-        usuario.setSenha(campoSenha.getText());
-        Arquivo.inserir(usuario);
-        App.setRoot("menu");
+    private TextField newLogin;
+
+    @FXML
+    private TextField newNome;
+
+    @FXML
+    private TextField newSenha;
+    
+    @FXML
+    private void alterar() throws IOException{
+        Usuario novoDado = new Usuario(newLogin.getText(), newNome.getText(), newSenha.getText());
+        Arquivo.alterar(TelaPrincipalController.logado, novoDado);
+        App.setRoot("telaPrincipal");
     }
     
     @FXML
-    private void limparCampos(){
-        this.campoLogin.setText("");
-        this.campoNome.setText("");
-        this.campoSenha.setText("");
+    private void sair(){
+        System.exit(0);
+    }
+    
+    @FXML
+    void limpar(ActionEvent event) {
+        newLogin.setText("");
+        newNome.setText("");
+        newSenha.setText("");
     }
     
     @FXML
@@ -51,10 +56,5 @@ public class NovoUsuarioController {
     @FXML
     private void sobre() throws IOException{
         App.setRoot("sobre");
-    }
-    
-    @FXML
-    private void sair(ActionEvent even){
-        System.exit(0);
     }
 }

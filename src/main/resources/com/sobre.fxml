@@ -32,52 +32,33 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.MenuController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.SobreController">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
-      <menus>
-        <Menu mnemonicParsing="false" text="Arquivo">
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#sair" text="Sair" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Usuario">
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#cadastrarUsuario" text="Cadastrar" />
-            <MenuItem mnemonicParsing="false" onAction="#listarUsuarios" text="Listar" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Ajuda">
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#sobre" text="Sobre" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
+      <MenuBar>
+         <menus>
+            <Menu mnemonicParsing="false" text="Arquivo">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#menu" text="Menu" />
+                  <MenuItem mnemonicParsing="false" onAction="#sair" text="Fechar" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Text fill="#860b0b" layoutX="207.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
+            <TextArea editable="false" layoutX="161.0" layoutY="33.0" prefHeight="64.0" prefWidth="318.0" text="Programa feito para a Matéria de Programação II,&#10; com objetivo de por em prática os conteudos&#10; estudados.">
                <font>
-                  <Font name="Times New Roman Bold Italic" size="50.0" />
+                  <Font name="Times New Roman" size="14.0" />
                </font>
-            </Text>
-            <TextField fx:id="campoLogin" layoutX="246.0" layoutY="139.0" />
-            <TextField fx:id="campoSenha" layoutX="246.0" layoutY="196.0" />
-            <Text layoutX="183.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="45.443359375" />
-            <Text layoutX="183.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="53.337890625" />
-            <Button layoutX="297.0" layoutY="253.0" mnemonicParsing="false" onAction="#entrar" text="Entrar" />
-            <Text fill="#7c7676" layoutX="284.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tela de Login" />
-            <Text fx:id="erroLogin" fill="#9a0000" layoutX="250.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" textOrigin="CENTER" />
+            </TextArea>
          </children></AnchorPane>
   </children>
 </VBox>

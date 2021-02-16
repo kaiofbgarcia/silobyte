@@ -45,12 +45,12 @@ public class ArquivoTest {
 //        Arquivo.inserir(u);        
 //    }
     
-//    @org.junit.jupiter.api.Test
-//    public void testListar(){
-//        ArrayList<Usuario> lista = Arquivo.listar();
-//        for(Usuario u : lista){
-//            System.out.println(u.getNome());
-//        }
-//    }
+    @org.junit.jupiter.api.Test
+    public void testListar(){
+        ArrayList<Usuario> lista = Arquivo.listar();
+        for(Usuario u : lista){
+            System.out.println("Login:" + u.getLogin() + "  Nome:" + u.getNome() + "  Senha:" + u.getSenha());
+        }
+    }
     
 }

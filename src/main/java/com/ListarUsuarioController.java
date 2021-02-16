@@ -8,39 +8,25 @@ package com;
 import com.modelo.Usuario;
 import com.util.Arquivo;
 import java.io.IOException;
+import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 
 /**
  *
  * @author kaiof
  */
-public class NovoUsuarioController {
+public class ListarUsuarioController {
     @FXML
-    private TextField campoLogin;
-
-    @FXML
-    private TextField campoNome;
-
-    @FXML
-    private TextField campoSenha;
+    private TextArea campoLista;
     
     @FXML
-    private void cadastrarUsuario() throws IOException{
-        Usuario usuario = new Usuario();
-        usuario.setLogin(campoLogin.getText());
-        usuario.setNome(campoNome.getText());
-        usuario.setSenha(campoSenha.getText());
-        Arquivo.inserir(usuario);
-        App.setRoot("menu");
-    }
-    
-    @FXML
-    private void limparCampos(){
-        this.campoLogin.setText("");
-        this.campoNome.setText("");
-        this.campoSenha.setText("");
+    private void listar(ActionEvent even){
+        ArrayList<Usuario> lista = Arquivo.listar();
+        for(Usuario u : lista){
+            campoLista.appendText("Nome:" + u.getNome() + "\n");
+        }
     }
     
     @FXML
@@ -57,4 +43,6 @@ public class NovoUsuarioController {
     private void sair(ActionEvent even){
         System.exit(0);
     }
+
+    
 }

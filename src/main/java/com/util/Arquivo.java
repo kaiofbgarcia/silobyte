@@ -63,7 +63,25 @@ public class Arquivo {
         
     }
     
-    public static void alterar(Usuario usuario){
-        
+    public static void alterar(Usuario usuarioBusca, Usuario usuarioNovo){
+        ArrayList<Usuario> lista = Arquivo.listar();
+        for(Usuario u : lista){
+            if(u.getLogin().equals(usuarioBusca.getLogin())){
+                if(u.getSenha().equals(usuarioBusca.getSenha())){
+                    u.setLogin(usuarioNovo.getLogin());
+                    u.setNome(usuarioNovo.getNome());
+                    u.setSenha(usuarioNovo.getSenha());
+                    try {
+                        FileOutputStream fos = new FileOutputStream(Info.ARQUIVO_USUARIO);
+                        ObjectOutputStream oos = new ObjectOutputStream(fos);
+                        oos.writeObject(lista);
+                        oos.close();
+                    } catch (IOException ex) {
+                        System.out.println("Erro ao inserir usuário");
+                    }
+                }
+            }
+        }
+        //return usuarioNovo;
     }
 }
