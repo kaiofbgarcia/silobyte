@@ -37,6 +37,8 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -61,17 +63,31 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <Text fill="#860b0b" layoutX="191.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
+            <ImageView id="imagem" fitHeight="343.0" fitWidth="660.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="#860b0b" layoutX="191.0" layoutY="59.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
                <font>
-                  <Font name="Times New Roman Bold Italic" size="50.0" />
+                  <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
             <TextField fx:id="newLogin" layoutX="230.0" layoutY="133.0" />
             <TextField fx:id="newNome" layoutX="230.0" layoutY="188.0" />
             <TextField fx:id="newSenha" layoutX="230.0" layoutY="244.0" />
-            <Text layoutX="148.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novo Login:" />
-            <Text layoutX="148.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novo Nome" />
-            <Text layoutX="147.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nova Senha:" />
+            <Text fill="WHITE" layoutX="148.0" layoutY="150.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo Login:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="WHITE" layoutX="148.0" layoutY="205.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo Nome">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="WHITE" layoutX="147.0" layoutY="261.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Nova Senha:">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
             <Button layoutX="326.0" layoutY="305.0" mnemonicParsing="false" onAction="#alterar" prefHeight="25.0" prefWidth="53.0" text="Entrar" />
             <Button layoutX="230.0" layoutY="305.0" mnemonicParsing="false" onAction="#limpar" text="Limpar" />
       </children>

@@ -37,6 +37,8 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -61,16 +63,21 @@
       </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Text layoutX="226.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Usuarios:" wrappingWidth="188.419921875">
+            <ImageView id="imagem" fitHeight="348.0" fitWidth="666.0" layoutX="-11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="226.0" layoutY="121.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Lista de Usuarios:" wrappingWidth="188.419921875">
                <font>
                   <Font name="Times New Roman" size="25.0" />
                </font>
             </Text>
-            <TextArea fx:id="campoLista" editable="false" layoutX="220.0" layoutY="151.0" prefHeight="145.0" prefWidth="200.0" />
+            <TextArea fx:id="campoLista" editable="false" layoutX="220.0" layoutY="151.0" opacity="0.8" prefHeight="145.0" prefWidth="200.0" />
             <Button layoutX="298.0" layoutY="320.0" mnemonicParsing="false" onAction="#listar" text="Listar" />
-            <Text fill="#860b0b" layoutX="224.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
+            <Text fill="#860b0b" layoutX="224.0" layoutY="65.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
                <font>
-                  <Font name="Times New Roman Bold Italic" size="50.0" />
+                  <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
          </children></AnchorPane>

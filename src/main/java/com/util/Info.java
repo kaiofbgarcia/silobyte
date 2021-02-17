@@ -10,5 +10,5 @@ package com.util;
  * @author kaiof
  */
 public class Info {
-    public static final String ARQUIVO_USUARIO = "C:\\Users\\kaiof\\OneDrive\\Área de Trabalho\\EAD 2020\\Programação 2\\silobyte\\usuario.dat";
+    public static final String ARQUIVO_USUARIO = "C:\\Users\\kaiof\\OneDrive\\Documentos\\NetBeansProjects\\silobytes\\src\\main\\java\\com\\util\\usuario.dat";
 }

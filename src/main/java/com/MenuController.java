@@ -5,7 +5,6 @@
  */
 package com;
 
-import static com.TelaPrincipalController.logado;
 import com.modelo.Usuario;
 import com.util.Arquivo;
 import java.io.IOException;

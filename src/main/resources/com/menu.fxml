@@ -3,13 +3,10 @@
 <!--
   Copyright (c) 2015, 2019, Gluon and/or its affiliates.
   All rights reserved. Use is subject to license terms.
-
   This file is available and licensed under the following license:
-
   Redistribution and use in source and binary forms, with or without
   modification, are permitted provided that the following conditions
   are met:
-
   - Redistributions of source code must retain the above copyright
     notice, this list of conditions and the following disclaimer.
   - Redistributions in binary form must reproduce the above copyright
@@ -18,7 +15,6 @@
   - Neither the name of Oracle Corporation nor the names of its
     contributors may be used to endorse or promote products derived
     from this software without specific prior written permission.
-
   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
@@ -37,6 +33,8 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -66,17 +64,28 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Text fill="#860b0b" layoutX="207.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
+            <ImageView id="imagem" fitHeight="338.0" fitWidth="648.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="#860b0b" layoutX="207.0" layoutY="59.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
                <font>
-                  <Font name="Times New Roman Bold Italic" size="50.0" />
+                  <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
             <TextField fx:id="campoLogin" layoutX="246.0" layoutY="139.0" />
             <TextField fx:id="campoSenha" layoutX="246.0" layoutY="196.0" />
-            <Text layoutX="183.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="45.443359375" />
-            <Text layoutX="183.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="53.337890625" />
+            <Text fill="WHITE" layoutX="183.0" layoutY="156.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Login" textAlignment="CENTER" wrappingWidth="45.443359375">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="WHITE" layoutX="183.0" layoutY="213.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Senha" textAlignment="CENTER" wrappingWidth="53.337890625">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
             <Button layoutX="297.0" layoutY="253.0" mnemonicParsing="false" onAction="#entrar" text="Entrar" />
-            <Text fill="#7c7676" layoutX="284.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tela de Login" />
+            <Text fill="WHITE" layoutX="284.0" layoutY="121.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Tela de Login" />
             <Text fx:id="erroLogin" fill="#9a0000" layoutX="250.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" textOrigin="CENTER" />
          </children></AnchorPane>
   </children>

@@ -9,7 +9,6 @@ import com.modelo.Usuario;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.text.Text;
 
 /**
  *

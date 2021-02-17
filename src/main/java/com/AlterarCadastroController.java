@@ -8,7 +8,6 @@ package com;
 import com.modelo.Usuario;
 import com.util.Arquivo;
 import java.io.IOException;
-import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
