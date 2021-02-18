@@ -30,7 +30,7 @@ public class Arquivo {
             oos.writeObject(atual);
             oos.close();
         } catch (IOException ex) {
-            System.out.println("Erro ao inserir usuário");
+            System.out.println("Erro ao inserir usuário!");
         }
     }
     
@@ -44,7 +44,7 @@ public class Arquivo {
             ois.close();
             return lista;
         } catch (FileNotFoundException e) {
-            System.out.println("Arquivo não encontrado");
+            System.out.println("Arquivo não encontrado!");
         } catch (EOFException e) {  // arquivo vazio
             return lista;
         } catch (IOException | ClassNotFoundException e) {
@@ -53,14 +53,29 @@ public class Arquivo {
             try {
                 fis.close();
             } catch (IOException ex) {
-                System.out.println("Erro ao ler arquivo");
+                System.out.println("Erro ao ler arquivo!");
             }
         }
         return lista;
     }
     
     public static void excluir(Usuario usuario){
-        
+        ArrayList<Usuario> lista = Arquivo.listar();
+        for(Usuario u : lista){
+            if(u.getLogin().equals(usuario.getLogin())){
+                if(u.getSenha().equals(usuario.getSenha())){
+                    lista.remove(u);
+                    try {
+                        FileOutputStream fos = new FileOutputStream(Info.ARQUIVO_USUARIO);
+                        ObjectOutputStream oos = new ObjectOutputStream(fos);
+                        oos.writeObject(lista);
+                        oos.close();
+                    } catch (IOException ex) {
+                        System.out.println("Erro ao excluir usuário!");
+                    }
+                }
+            }
+        }
     }
     
     public static void alterar(Usuario usuarioBusca, Usuario usuarioNovo){
@@ -77,11 +92,10 @@ public class Arquivo {
                         oos.writeObject(lista);
                         oos.close();
                     } catch (IOException ex) {
-                        System.out.println("Erro ao inserir usuário");
+                        System.out.println("Erro ao alterar usuário!");
                     }
                 }
             }
         }
-        //return usuarioNovo;
     }
 }

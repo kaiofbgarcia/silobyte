@@ -55,7 +55,7 @@
             <Menu mnemonicParsing="false" text="Conta">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#alterarCadastro" text="Alterar Cadastro" />
-                  <MenuItem mnemonicParsing="false" text="Excluir Conta" />
+                  <MenuItem mnemonicParsing="false" onAction="#excluirCadastro" text="Excluir Conta" />
               </items>
             </Menu>
         <Menu mnemonicParsing="false" text="Ajuda">

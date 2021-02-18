@@ -6,6 +6,7 @@
 package com;
 
 import com.modelo.Usuario;
+import com.util.Arquivo;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,6 +22,12 @@ public class TelaPrincipalController {
     @FXML
     private void alterarCadastro(ActionEvent even) throws IOException{
         App.setRoot("alterarCadastro");
+    }
+    
+    @FXML
+    private void excluirCadastro(ActionEvent even) throws IOException{
+        Arquivo.excluir(logado);
+        App.setRoot("menu");
     }
     
     @FXML
