@@ -11,4 +11,6 @@ package com.util;
  */
 public class Info {
     public static final String ARQUIVO_USUARIO = "C:\\Users\\kaiof\\OneDrive\\Documentos\\NetBeansProjects\\silobytes\\src\\main\\java\\com\\util\\usuario.dat";
+    public static final String ARQUIVO_PRODUTOR = "C:\\Users\\kaiof\\OneDrive\\Documentos\\NetBeansProjects\\silobytes\\src\\main\\java\\com\\util\\produtor.dat";
+
 }

@@ -31,6 +31,16 @@ public class TelaPrincipalController {
     }
     
     @FXML
+    private void cadastrarProdutor(ActionEvent even) throws IOException{
+        App.setRoot("produtorCadastro");
+    }
+    
+    @FXML
+    private void listarProdutor(ActionEvent even) throws IOException{
+        App.setRoot("listarProdutor");
+    }
+    
+    @FXML
     private void sair(){
         System.exit(0);
     }

@@ -44,13 +44,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ListarUsuarioController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ListarProdutorController">
   <children>
       <MenuBar>
          <menus>
             <Menu mnemonicParsing="false" text="Arquivo">
                <items>
-                  <MenuItem mnemonicParsing="false" onAction="#menu" text="Voltar" />
+                  <MenuItem mnemonicParsing="false" onAction="#menu" text="Menu" />
+                  <MenuItem mnemonicParsing="false" onAction="#telaPrincipal" text="Tela Principal" />
                   <MenuItem mnemonicParsing="false" onAction="#sair" text="Fechar" />
                </items>
             </Menu>
@@ -73,15 +74,15 @@
                   <Font name="Times New Roman" size="25.0" />
                </font>
             </Text>
-            <TextArea fx:id="campoLista" editable="false" layoutX="220.0" layoutY="151.0" opacity="0.8" prefHeight="145.0" prefWidth="200.0" />
-            <Button layoutX="292.0" layoutY="320.0" mnemonicParsing="false" onAction="#listar" prefHeight="25.0" prefWidth="64.0" text="Listar" />
+            <TextArea fx:id="campoLista" editable="false" layoutX="59.0" layoutY="148.0" opacity="0.8" prefHeight="145.0" prefWidth="558.0" />
+            <Button layoutX="289.0" layoutY="309.0" mnemonicParsing="false" onAction="#listar" prefHeight="25.0" prefWidth="67.0" text="Listar" />
             <Text fill="#860b0b" layoutX="224.0" layoutY="65.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
                <font>
                   <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
-            <Button layoutX="224.0" layoutY="320.0" mnemonicParsing="false" onAction="#menu" prefHeight="25.0" prefWidth="64.0" text="Voltar" />
-            <Button layoutX="360.0" layoutY="320.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="64.0" text="Limpar" />
+            <Button layoutX="501.0" layoutY="309.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="67.0" text="Limpar" />
+            <Button layoutX="86.0" layoutY="309.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="67.0" text="Voltar" />
          </children></AnchorPane>
   </children>
 </VBox>

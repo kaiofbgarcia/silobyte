@@ -44,13 +44,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.NovoUsuarioController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ProdutorCadastroController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="Arquivo">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#menu" text="Logout" />
+                  <MenuItem mnemonicParsing="false" text="Tela Principal" />
             <MenuItem mnemonicParsing="false" onAction="#sair" text="Fechar" />
           </items>
         </Menu>
@@ -63,37 +64,35 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView id="imagem" fitHeight="338.0" fitWidth="648.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="imagem" fitHeight="338.0" fitWidth="648.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
                </image>
             </ImageView>
-            <TextField fx:id="campoLogin" layoutX="246.0" layoutY="127.0" />
-            <TextField fx:id="campoNome" layoutX="246.0" layoutY="175.0" />
-            <TextField fx:id="campoSenha" layoutX="246.0" layoutY="229.0" />
-            <Button layoutX="218.0" layoutY="287.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="57.0" text="Limpar" />
-            <Button layoutX="366.0" layoutY="287.0" mnemonicParsing="false" onAction="#cadastrarUsuario" onDragDetected="#cadastrarUsuario" prefHeight="25.0" prefWidth="57.0" text="Salvar" />
-            <Text fill="#860b0b" layoutX="206.0" layoutY="59.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
+            <Text fill="#860b0b" layoutX="191.0" layoutY="59.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
                <font>
-                  <Font name="Times New Roman Bold Italic" size="65.0" />
+                  <Font name="Times New Roman Bold Italic" size="50.0" />
                </font>
             </Text>
-            <Text fill="#7a7676" layoutX="267.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tela de Cadastro" />
-            <Text fill="WHITE" layoutX="189.0" layoutY="145.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Login" textAlignment="CENTER">
+            <Text fill="WHITE" layoutX="154.0" layoutY="205.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="CPF" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="187.0" layoutY="193.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Nome" textAlignment="CENTER">
+            <Text fill="WHITE" layoutX="148.0" layoutY="150.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Nome" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
-               </font>
-            </Text>
-            <Text fill="WHITE" layoutX="187.0" layoutY="247.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Senha">
+               </font></Text>
+            <Text fill="WHITE" layoutX="150.0" layoutY="262.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Email" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
-               </font>
-            </Text>
+               </font></Text>
+            <TextField fx:id="produtorNome" layoutX="230.0" layoutY="133.0" />
+            <TextField fx:id="produtorCPF" layoutX="230.0" layoutY="188.0" />
+            <TextField fx:id="produtorEmail" layoutX="230.0" layoutY="245.0" />
+            <Button layoutX="341.0" layoutY="311.0" mnemonicParsing="false" onAction="#cadastrarProdutor" prefHeight="25.0" prefWidth="76.0" text="Cadastrar" />
+            <Button layoutX="192.0" layoutY="311.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="76.0" text="Limpar" />
+            <Button layoutX="14.0" layoutY="311.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="76.0" text="Voltar" />
       </children>
     </AnchorPane>
   </children>

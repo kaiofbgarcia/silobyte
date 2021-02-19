@@ -5,8 +5,10 @@
  */
 package com;
 
+import com.modelo.Produtor;
 import com.modelo.Usuario;
 import com.util.Arquivo;
+import com.util.ArquivoProdutor;
 import java.io.IOException;
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
@@ -17,21 +19,26 @@ import javafx.scene.control.TextArea;
  *
  * @author kaiof
  */
-public class ListarUsuarioController {
+public class ListarProdutorController {
     @FXML
     private TextArea campoLista;
     
     @FXML
     private void listar(ActionEvent even){
-        ArrayList<Usuario> lista = Arquivo.listar();
-        for(Usuario u : lista){
-            campoLista.appendText("Nome:" + u.getNome() + "\n");
+        ArrayList<Produtor> lista = ArquivoProdutor.listar();
+        for(Produtor u : lista){
+            campoLista.appendText("Nome:" + u.getNome() + "   CPF:" + u.getCPF() + "   Email:" + u.getEmail() + "   Devendo:" + u.getDevendo() + "\n");
         }
     }
     
     @FXML
     private void limparCampos(){
         this.campoLista.setText("");
+    }
+    
+    @FXML
+    private void telaPrincipal(ActionEvent even) throws IOException{
+        App.setRoot("telaPrincipal");
     }
     
     @FXML

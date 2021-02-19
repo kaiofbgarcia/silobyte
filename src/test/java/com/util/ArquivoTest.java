@@ -5,6 +5,7 @@
  */
 package com.util;
 
+import com.modelo.Produtor;
 import com.modelo.Usuario;
 import java.util.ArrayList;
 import org.junit.jupiter.api.AfterEach;
@@ -52,5 +53,13 @@ public class ArquivoTest {
 //            System.out.println("Login:" + u.getLogin() + "  Nome:" + u.getNome() + "  Senha:" + u.getSenha());
 //        }
 //    }
+    
+    @org.junit.jupiter.api.Test
+    public void testListarProdutor(){
+        ArrayList<Produtor> lista = ArquivoProdutor.listar();
+        for(Produtor u : lista){
+            System.out.println("Nome:" + u.getNome() + "  CPF:" + u.getCPF() + "  Email:" + u.getEmail());
+        }
+    }
     
 }
