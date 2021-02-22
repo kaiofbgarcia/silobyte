@@ -82,7 +82,7 @@
                </font>
             </Text>
             <Button layoutX="501.0" layoutY="309.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="67.0" text="Limpar" />
-            <Button layoutX="86.0" layoutY="309.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="67.0" text="Voltar" />
+            <Button layoutX="87.0" layoutY="309.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="67.0" text="Voltar" />
          </children></AnchorPane>
   </children>
 </VBox>

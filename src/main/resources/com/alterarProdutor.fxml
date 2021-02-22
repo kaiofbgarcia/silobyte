@@ -36,6 +36,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -43,22 +44,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.TelaPrincipalController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.AlterarProdutorController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="Arquivo">
           <items>
-            <MenuItem mnemonicParsing="false" onAction="#menu" text="Logout" />
+            <MenuItem mnemonicParsing="false" onAction="#menu" text="Menu" />
             <MenuItem mnemonicParsing="false" onAction="#sair" text="Fechar" />
           </items>
         </Menu>
-            <Menu mnemonicParsing="false" text="Conta">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#alterarCadastro" text="Alterar Cadastro" />
-                  <MenuItem mnemonicParsing="false" onAction="#excluirCadastro" text="Excluir Conta" />
-              </items>
-            </Menu>
         <Menu mnemonicParsing="false" text="Ajuda">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#sobre" text="Sobre" />
@@ -67,24 +62,42 @@
       </menus>
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-         <children>
-            <ImageView id="imagem" fitHeight="338.0" fitWidth="648.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+      <children>
+            <ImageView id="imagem" fitHeight="343.0" fitWidth="660.0" layoutX="-10.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
                </image>
             </ImageView>
-            <Text fill="#860b0b" layoutX="206.0" layoutY="59.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
+            <Text fill="#860b0b" layoutX="191.0" layoutY="59.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
                <font>
                   <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
-            <Text layoutX="560.0" layoutY="27.0" stroke="WHITE" strokeType="OUTSIDE" text="Tela Principal" textAlignment="CENTER" underline="true" />
-            <Button layoutX="29.0" layoutY="99.0" mnemonicParsing="false" onAction="#cadastrarProdutor" text="Cadastrar Novo Produtor" />
-            <Button layoutX="29.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Fazer Venda de Espaço" />
-            <Button layoutX="29.0" layoutY="175.0" mnemonicParsing="false" onAction="#listarProdutor" prefHeight="25.0" prefWidth="149.0" text="Listar Produtores" />
-            <Button layoutX="29.0" layoutY="136.0" mnemonicParsing="false" onAction="#alterarProdutor" prefHeight="25.0" prefWidth="149.0" text="Alterar Cadastro" />
-            <Button layoutX="29.0" layoutY="213.0" mnemonicParsing="false" onAction="#excluirProdutor" prefHeight="25.0" prefWidth="149.0" text="Excluir Produtor" />
-         </children>
+            <TextField fx:id="oldEmail" layoutX="230.0" layoutY="88.0" />
+            <TextField fx:id="newNome" layoutX="230.0" layoutY="133.0" />
+            <TextField fx:id="newCPF" layoutX="230.0" layoutY="188.0" />
+            <TextField fx:id="newEmail" layoutX="230.0" layoutY="244.0" />
+            <Text fill="WHITE" layoutX="147.0" layoutY="106.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Email Antigo" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="148.0" layoutY="150.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo Nome:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="WHITE" layoutX="159.0" layoutY="206.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo CPF:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="WHITE" layoutX="147.0" layoutY="261.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo E-mail:" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Button layoutX="326.0" layoutY="305.0" mnemonicParsing="false" onAction="#alterar" prefHeight="25.0" prefWidth="53.0" text="Alterar" />
+            <Button layoutX="230.0" layoutY="305.0" mnemonicParsing="false" onAction="#limpar" text="Limpar" />
+            <Button layoutX="26.0" layoutY="305.0" mnemonicParsing="false" onAction="#telaPrincipal" text="Voltar" />
+      </children>
     </AnchorPane>
   </children>
 </VBox>

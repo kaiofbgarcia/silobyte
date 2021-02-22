@@ -59,11 +59,46 @@ public class ArquivoProdutor {
         return lista;
     }
     
-    public static void excluir(Usuario usuario){
-        
+    public static boolean excluir(Produtor produtor){
+        ArrayList<Produtor> lista = ArquivoProdutor.listar();
+        for(Produtor u : lista){
+            if(u.getNome().equals(produtor.getNome())){
+                if(u.getCPF().equals(produtor.getCPF())){
+                    if(u.getEmail().equals(produtor.getEmail())){
+                        lista.remove(u);
+                        try {
+                            FileOutputStream fos = new FileOutputStream(Info.ARQUIVO_PRODUTOR);
+                            ObjectOutputStream oos = new ObjectOutputStream(fos);
+                            oos.writeObject(lista);
+                            oos.close();
+                            return true;
+                        } catch (IOException ex) {
+                            System.out.println("Erro ao excluir produtor!");
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
     }
     
-    public static void alterar(Usuario usuarioBusca, Usuario usuarioNovo){
-        
+    public static void alterar(String email, Produtor produtorNovo){
+        ArrayList<Produtor> lista = ArquivoProdutor.listar();
+        for(Produtor u : lista){   
+            if(u.getEmail().equals(email)){  
+                u.setNome(produtorNovo.getNome());
+                u.setCPF(produtorNovo.getCPF());
+                u.setEmail(produtorNovo.getEmail());
+                try {
+                    FileOutputStream fos = new FileOutputStream(Info.ARQUIVO_PRODUTOR);
+                    ObjectOutputStream oos = new ObjectOutputStream(fos);
+                    oos.writeObject(lista);
+                    oos.close();
+                } catch (IOException ex) {
+                    System.out.println("Erro ao alterar produtor!");
+                }
+            }
+        }
     }
 }

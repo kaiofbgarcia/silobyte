@@ -10,6 +10,7 @@ import com.util.Arquivo;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.text.Text;
 
 /**
  *
@@ -36,8 +37,18 @@ public class TelaPrincipalController {
     }
     
     @FXML
+    private void alterarProdutor(ActionEvent even) throws IOException{
+        App.setRoot("alterarProdutor");
+    }
+    
+    @FXML
     private void listarProdutor(ActionEvent even) throws IOException{
         App.setRoot("listarProdutor");
+    }
+    
+    @FXML
+    private void excluirProdutor(ActionEvent even) throws IOException{
+        App.setRoot("excluirProdutor");
     }
     
     @FXML
