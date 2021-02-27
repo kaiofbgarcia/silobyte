@@ -47,8 +47,18 @@ public class TelaPrincipalController {
     }
     
     @FXML
+    private void listarVenda(ActionEvent even) throws IOException{
+        App.setRoot("listarVenda");
+    }
+    
+    @FXML
     private void excluirProdutor(ActionEvent even) throws IOException{
         App.setRoot("excluirProdutor");
+    }
+    
+    @FXML
+    private void fazerVenda(ActionEvent even) throws IOException{
+        App.setRoot("venda");
     }
     
     @FXML

@@ -73,24 +73,24 @@
                   <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
-            <TextField fx:id="oldEmail" layoutX="230.0" layoutY="88.0" />
-            <TextField fx:id="newNome" layoutX="230.0" layoutY="133.0" />
-            <TextField fx:id="newCPF" layoutX="230.0" layoutY="188.0" />
-            <TextField fx:id="newEmail" layoutX="230.0" layoutY="244.0" />
-            <Text fill="WHITE" layoutX="147.0" layoutY="106.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Email Antigo" textAlignment="CENTER">
+            <TextField fx:id="oldCPF" layoutX="230.0" layoutY="134.0" />
+            <TextField fx:id="newNome" layoutX="230.0" layoutY="196.0" />
+            <TextField fx:id="newCPF" layoutX="230.0" layoutY="232.0" />
+            <TextField fx:id="newEmail" layoutX="230.0" layoutY="265.0" />
+            <Text fill="WHITE" layoutX="250.0" layoutY="129.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="CPF já cadastrado" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="148.0" layoutY="150.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo Nome:" textAlignment="CENTER">
+            <Text fill="WHITE" layoutX="147.0" layoutY="214.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo Nome:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font></Text>
-            <Text fill="WHITE" layoutX="159.0" layoutY="206.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo CPF:" textAlignment="CENTER">
+            <Text fill="WHITE" layoutX="155.0" layoutY="250.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo CPF:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font></Text>
-            <Text fill="WHITE" layoutX="147.0" layoutY="261.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo E-mail:" textAlignment="CENTER">
+            <Text fill="WHITE" layoutX="147.0" layoutY="283.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Novo E-mail:" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font></Text>

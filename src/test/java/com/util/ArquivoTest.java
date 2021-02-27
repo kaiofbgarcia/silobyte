@@ -7,6 +7,7 @@ package com.util;
 
 import com.modelo.Produtor;
 import com.modelo.Usuario;
+import com.modelo.Venda;
 import java.util.ArrayList;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -54,11 +55,18 @@ public class ArquivoTest {
 //        }
 //    }
     
+//    @org.junit.jupiter.api.Test
+//    public void testListarProdutor(){
+//        ArrayList<Produtor> lista = ArquivoProdutor.listar();
+//        for(Produtor u : lista){
+//            System.out.println("Nome:" + u.getNome() + "  CPF:" + u.getCPF() + "  Email:" + u.getEmail());
+//        }
+//    }
     @org.junit.jupiter.api.Test
-    public void testListarProdutor(){
-        ArrayList<Produtor> lista = ArquivoProdutor.listar();
-        for(Produtor u : lista){
-            System.out.println("Nome:" + u.getNome() + "  CPF:" + u.getCPF() + "  Email:" + u.getEmail());
+    public void testListarVenda(){
+        ArrayList<Venda> lista = ArquivoVenda.listar();
+        for(Venda u : lista){
+            System.out.println("CPF: " + u.getCpfProdutor() + "   Tipo do Grão: " + u.getTipoGrao() + "   Data de Entrada: " + u.getDataEntrada() + "\n" +"Data de Saída: " + u.getDataSaida() + "   Quantidade de Sacas: " + u.getQtdSacas() + "   Valor a ser Pago: " + u.getValorVenda() +"\n\n");
         }
     }
     

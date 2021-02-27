@@ -5,8 +5,8 @@
  */
 package com;
 
-import com.modelo.Produtor;
-import com.util.ArquivoProdutor;
+import com.modelo.Venda;
+import com.util.ArquivoVenda;
 import java.io.IOException;
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
@@ -17,15 +17,15 @@ import javafx.scene.control.TextArea;
  *
  * @author kaiof
  */
-public class ListarProdutorController {
+public class ListarVendaController {
     @FXML
     private TextArea campoLista;
     
     @FXML
     private void listar(ActionEvent even){
-        ArrayList<Produtor> lista = ArquivoProdutor.listar();
-        for(Produtor u : lista){
-            campoLista.appendText("Nome:" + u.getNome() + "   CPF:" + u.getCPF() + "   Email:" + u.getEmail() + "   Devendo:" + u.getDevendo() + "\n");
+        ArrayList<Venda> lista = ArquivoVenda.listar();
+        for(Venda u : lista){
+            campoLista.appendText("CPF: " + u.getCpfProdutor() + "   Tipo do Grão: " + u.getTipoGrao() + "   Data de Entrada: " + u.getDataEntrada() + "\n" +"Data de Saída: " + u.getDataSaida() + "   Quantidade de Sacas: " + u.getQtdSacas() + "   Valor a ser Pago: " + u.getValorVenda() +"\n\n");
         }
     }
     

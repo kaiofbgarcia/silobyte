@@ -19,7 +19,7 @@ import javafx.scene.control.TextField;
 public class AlterarProdutorController {
     
     @FXML
-    private TextField oldEmail;
+    private TextField oldCPF;
     
     @FXML
     private TextField newNome;
@@ -33,7 +33,7 @@ public class AlterarProdutorController {
     @FXML
     private void alterar() throws IOException{
         Produtor novoDado = new Produtor(newNome.getText(), newCPF.getText(), newEmail.getText());
-        ArquivoProdutor.alterar(oldEmail.getText(), novoDado);
+        ArquivoProdutor.alterar(oldCPF.getText(), novoDado);
         App.setRoot("telaPrincipal");
     }
     
@@ -44,6 +44,7 @@ public class AlterarProdutorController {
     
     @FXML
     void limpar(ActionEvent event) {
+        oldCPF.setText("");
         newNome.setText("");
         newCPF.setText("");
         newEmail.setText("");

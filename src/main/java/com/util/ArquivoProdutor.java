@@ -6,7 +6,6 @@
 package com.util;
 
 import com.modelo.Produtor;
-import com.modelo.Usuario;
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -83,13 +82,14 @@ public class ArquivoProdutor {
         return false;
     }
     
-    public static void alterar(String email, Produtor produtorNovo){
+    public static void alterar(String CPF, Produtor produtorNovo){
         ArrayList<Produtor> lista = ArquivoProdutor.listar();
         for(Produtor u : lista){   
-            if(u.getEmail().equals(email)){  
+            if(u.getCPF().equals(CPF)){  
                 u.setNome(produtorNovo.getNome());
                 u.setCPF(produtorNovo.getCPF());
                 u.setEmail(produtorNovo.getEmail());
+                u.setDevendo(produtorNovo.getDevendo());
                 try {
                     FileOutputStream fos = new FileOutputStream(Info.ARQUIVO_PRODUTOR);
                     ObjectOutputStream oos = new ObjectOutputStream(fos);

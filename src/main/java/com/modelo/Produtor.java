@@ -15,13 +15,13 @@ public class Produtor implements Serializable{
     String nome;
     String cpf;
     String email;
-    String devendo;
+    double devendo;
     
     public Produtor(){
         this.cpf = "";
         this.nome = "";
         this.email = "";
-        this.devendo = "0";
+        this.devendo = 0;
     }
     
     public Produtor(String nome, String cpf, String email){
@@ -29,6 +29,12 @@ public class Produtor implements Serializable{
         this.nome = nome;
         this.email = email;
     }
+//    public Produtor(String nome, String cpf, String email, Venda venda){
+//        this.cpf = cpf;
+//        this.nome = nome;
+//        this.email = email;
+//        this.venda = venda;
+//    }
     
     public String getCPF(){
         return cpf;
@@ -54,11 +60,11 @@ public class Produtor implements Serializable{
         this.email = email;
     }
     
-    public String getDevendo(){
+    public double getDevendo(){
         return devendo;
     }
     
-    public void setDevendo(String devendo) {
+    public void setDevendo(double devendo) {
         this.devendo = devendo;
     }
 }
