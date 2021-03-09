@@ -70,8 +70,8 @@
                   <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
                </image>
             </ImageView>
-            <TextField fx:id="cpfProdutor" layoutX="95.0" layoutY="135.0" />
-            <MenuButton fx:id="campoGrao" layoutX="94.0" layoutY="211.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="155.0" textAlignment="CENTER">
+            <TextField fx:id="cpfProdutor" layoutX="95.0" layoutY="109.0" />
+            <MenuButton fx:id="campoGrao" layoutX="92.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="155.0" textAlignment="CENTER">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#defineMilho" text="Milho" />
                 <MenuItem mnemonicParsing="false" onAction="#defineTrigo" text="Trigo" />
@@ -101,22 +101,33 @@
                <font>
                   <Font size="14.0" />
                </font></Text>
-            <Text fill="WHITE" layoutX="104.0" layoutY="127.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="CPF do Produtor">
+            <Text fill="WHITE" layoutX="104.0" layoutY="104.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="CPF do Produtor">
                <font>
                   <Font size="18.0" />
                </font></Text>
-            <Text fill="WHITE" layoutX="120.0" layoutY="205.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Tipo de Grão">
+            <Text fill="WHITE" layoutX="118.0" layoutY="229.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Tipo de Grão">
                <font>
                   <Font size="18.0" />
                </font></Text>
-            <Text fill="WHITE" layoutX="478.0" layoutY="263.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="(ano - mês - dia)">
+            <Text fill="WHITE" layoutX="478.0" layoutY="263.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="(ano - mês - dia)">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="478.0" layoutY="193.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="(ano - mês - dia)">
+            <Text fill="WHITE" layoutX="478.0" layoutY="193.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="(ano - mês - dia)">
                <font>
                   <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="474.0" layoutY="47.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="Tela de Venda">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="campoID" layoutX="95.0" layoutY="169.0" />
+            <Text fill="WHITE" layoutX="101.0" layoutY="163.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Codigo da Venda">
+               <font>
+                  <Font size="18.0" />
                </font>
             </Text>
          </children>

@@ -36,7 +36,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -44,45 +44,56 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ListarVendaController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.PagamentoController">
   <children>
-      <MenuBar>
-         <menus>
-            <Menu mnemonicParsing="false" text="Arquivo">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#menu" text="Menu" />
-                  <MenuItem mnemonicParsing="false" onAction="#telaPrincipal" text="Tela Principal" />
-                  <MenuItem mnemonicParsing="false" onAction="#sair" text="Fechar" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Ajuda">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#sobre" text="Sobre" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Arquivo">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#menu" text="Logout" />
+            <MenuItem mnemonicParsing="false" onAction="#sair" text="Fechar" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ajuda">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#sobre" text="Sobre" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-         <children>
-            <ImageView id="imagem" fitHeight="348.0" fitWidth="666.0" layoutX="-11.0" pickOnBounds="true" preserveRatio="true">
+      <children>
+            <ImageView id="imagem" fitHeight="338.0" fitWidth="648.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="233.0" layoutY="131.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Lista de Vendas:" textAlignment="CENTER" wrappingWidth="188.419921875">
-               <font>
-                  <Font name="Times New Roman" size="25.0" />
-               </font>
-            </Text>
-            <TextArea fx:id="campoLista" editable="false" layoutX="59.0" layoutY="148.0" opacity="0.8" prefHeight="145.0" prefWidth="558.0" />
-            <Button layoutX="289.0" layoutY="309.0" mnemonicParsing="false" onAction="#listar" prefHeight="25.0" prefWidth="67.0" text="Listar" />
-            <Text fill="#860b0b" layoutX="224.0" layoutY="65.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
+            <TextField fx:id="cpfProdutor" layoutX="246.0" layoutY="127.0" />
+            <TextField fx:id="valorRecebido" layoutX="246.0" layoutY="175.0" />
+            <Button layoutX="366.0" layoutY="287.0" mnemonicParsing="false" onAction="#pagar" prefHeight="25.0" prefWidth="57.0" text="Salvar" />
+            <Button layoutX="218.0" layoutY="287.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="57.0" text="Limpar" />
+            <Text fill="#860b0b" layoutX="206.0" layoutY="59.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
                <font>
                   <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
-            <Button layoutX="501.0" layoutY="309.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="67.0" text="Limpar" />
-            <Button layoutX="87.0" layoutY="309.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="67.0" text="Voltar" />
-         </children></AnchorPane>
+            <Text fill="WHITE" layoutX="271.0" layoutY="119.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="CPF do Produtor" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="273.0" layoutY="171.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Valor Recebido" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="54.0" layoutY="287.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+            <Text fill="WHITE" layoutX="497.0" layoutY="42.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="Tela de Pagamento">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+      </children>
+    </AnchorPane>
   </children>
 </VBox>

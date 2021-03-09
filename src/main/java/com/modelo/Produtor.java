@@ -63,8 +63,13 @@ public class Produtor implements Serializable{
     public double getDevendo(){
         return devendo;
     }
-    
     public void setDevendo(double devendo) {
         this.devendo = devendo;
+    }
+    public void setDevendoMais(double devendo) {
+        this.devendo = this.devendo + devendo;
+    }
+    public void setDevendoMenos(double devendo) {
+        this.devendo = this.devendo - devendo;
     }
 }

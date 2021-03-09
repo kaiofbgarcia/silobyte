@@ -98,6 +98,11 @@
                   <Font size="14.0" />
                </font>
             </Text>
+            <Text fill="WHITE" layoutX="468.0" layoutY="42.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="Excluir Cadastro Produtor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
       </children>
     </AnchorPane>
   </children>

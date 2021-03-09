@@ -66,11 +66,11 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-image: ..\..\java\com\util\shutterstock_451718692.jpg;" VBox.vgrow="ALWAYS">
          <children>
-            <ImageView id="imagem" fitHeight="338.0" fitWidth="648.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="imagem" fitHeight="338.0" fitWidth="648.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
+                  <Image url="@../../java/image/shutterstock_451718692.jpg" />
                </image>
             </ImageView>
             <Text fill="#860b0b" layoutX="206.0" layoutY="59.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
@@ -78,13 +78,19 @@
                   <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
-            <Text layoutX="560.0" layoutY="27.0" stroke="WHITE" strokeType="OUTSIDE" text="Tela Principal" textAlignment="CENTER" underline="true" />
+            <Text fill="WHITE" layoutX="507.0" layoutY="42.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="Tela Principal" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
             <Button layoutX="29.0" layoutY="99.0" mnemonicParsing="false" onAction="#cadastrarProdutor" text="Cadastrar Novo Produtor" />
-            <Button layoutX="460.0" layoutY="99.0" mnemonicParsing="false" onAction="#fazerVenda" prefHeight="25.0" prefWidth="149.0" text="Fazer Venda de Espaço" />
-            <Button layoutX="29.0" layoutY="175.0" mnemonicParsing="false" onAction="#listarProdutor" prefHeight="25.0" prefWidth="149.0" text="Listar Produtores" />
             <Button layoutX="29.0" layoutY="136.0" mnemonicParsing="false" onAction="#alterarProdutor" prefHeight="25.0" prefWidth="149.0" text="Alterar Cadastro" />
+            <Button layoutX="29.0" layoutY="175.0" mnemonicParsing="false" onAction="#listarProdutor" prefHeight="25.0" prefWidth="149.0" text="Listar Produtores" />
             <Button layoutX="29.0" layoutY="213.0" mnemonicParsing="false" onAction="#excluirProdutor" prefHeight="25.0" prefWidth="149.0" text="Excluir Produtor" />
+            <Button layoutX="460.0" layoutY="99.0" mnemonicParsing="false" onAction="#fazerVenda" prefHeight="25.0" prefWidth="149.0" text="Fazer Venda de Espaço" />
             <Button layoutX="460.0" layoutY="136.0" mnemonicParsing="false" onAction="#listarVenda" prefHeight="25.0" prefWidth="149.0" text="Listar Vendas" />
+            <Button layoutX="460.0" layoutY="175.0" mnemonicParsing="false" onAction="#pagamento" prefHeight="25.0" prefWidth="149.0" text="Efetuar Pagamento" />
+            <Button layoutX="460.0" layoutY="213.0" mnemonicParsing="false" onAction="#alterarVenda" prefHeight="25.0" prefWidth="149.0" text="Alterar Data de Saída" />
+            <Button layoutX="460.0" layoutY="253.0" mnemonicParsing="false" onAction="#excluirVenda" prefHeight="25.0" prefWidth="149.0" text="Excluir Venda" />
          </children>
     </AnchorPane>
   </children>

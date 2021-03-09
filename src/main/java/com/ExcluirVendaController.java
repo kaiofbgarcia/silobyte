@@ -5,33 +5,31 @@
  */
 package com;
 
-import com.modelo.Produtor;
-import com.util.ArquivoProdutor;
+import com.util.ArquivoVenda;
 import java.io.IOException;
-import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 /**
  *
  * @author kaiof
  */
-public class ListarProdutorController {
-    @FXML
-    private TextArea campoLista;
+public class ExcluirVendaController {
     
     @FXML
-    private void listar(ActionEvent even){
-        ArrayList<Produtor> lista = ArquivoProdutor.listar();
-        for(Produtor u : lista){
-            campoLista.appendText("Nome: " + u.getNome() + "\t\tCPF: " + u.getCPF() + "\t\tEmail: " + u.getEmail() + "\t\tDevendo: R$" + u.getDevendo() + "\n");
-        }
+    private TextField campoID;
+    
+    @FXML
+    private void excluirVenda(ActionEvent even) throws IOException{
+        long id = Long.valueOf(campoID.getText());
+        ArquivoVenda.excluir(id);
+        App.setRoot("telaPrincipal");
     }
     
     @FXML
     private void limparCampos(){
-        this.campoLista.setText("");
+        this.campoID.setText("");
     }
     
     @FXML
@@ -52,7 +50,5 @@ public class ListarProdutorController {
     @FXML
     private void sair(ActionEvent even){
         System.exit(0);
-    }
-
-    
+    } 
 }

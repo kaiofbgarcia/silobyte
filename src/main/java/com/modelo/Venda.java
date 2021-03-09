@@ -14,42 +14,45 @@ import java.time.temporal.ChronoUnit;
  * @author kaiof
  */
 public class Venda implements Serializable{
-    static int valorMilho = 85;
-    static int valorTrigo = 150;
-    static int valorSoja = 160;
+    public static final int valorMilho = 85;
+    public static final int valorTrigo = 150;
+    public static final int valorSoja = 160;
     
     String tipoGrao;
     String cpfProdutor;
+    Usuario vendedor;
     int qtdSacas;
     LocalDate dataEntrada;
     LocalDate dataSaida;
-    
     double valorVenda;
     long qtdDias;
- 
-    public Venda(){
-        this.tipoGrao = "";
-        this.cpfProdutor = "";
-        this.qtdSacas = 0;
-        this.dataEntrada = LocalDate.parse("0000-00-00");
-        this.dataSaida= LocalDate.parse("0000-00-00");
-        this.valorVenda = 0;
-        this.qtdDias = 0;
-    }
-    public Venda(String tipoGrao, String cpfProdutor, String qtdSacas, String dataEntrada, String dataSaida){
+    long ID;
+  
+    public Venda(String tipoGrao, String cpfProdutor, String qtdSacas, String dataEntrada, String dataSaida, long ID, Usuario vendedor){
         this.tipoGrao = tipoGrao;
         this.cpfProdutor = cpfProdutor;
         this.qtdSacas = Integer.parseInt(qtdSacas);
+        this.ID = ID;
+        this.vendedor = vendedor;
         this.dataEntrada = LocalDate.parse(dataEntrada);
         this.dataSaida = LocalDate.parse(dataSaida);
         this.qtdDias = ChronoUnit.DAYS.between(this.dataEntrada, this.dataSaida);
         if(this.tipoGrao.equals("Milho")){
-            this.valorVenda = this.qtdSacas * this.qtdDias * this.valorMilho;
+            this.valorVenda = this.qtdSacas * this.qtdDias * Venda.valorMilho;
         } else if(this.tipoGrao.equals("Trigo")){
-            this.valorVenda = this.qtdSacas*this.qtdDias*this.valorTrigo;
+            this.valorVenda = this.qtdSacas*this.qtdDias*Venda.valorTrigo;
         } else if(tipoGrao.equals("Soja")){
-            this.valorVenda = this.qtdSacas*this.qtdDias*this.valorSoja;
+            this.valorVenda = this.qtdSacas*this.qtdDias*Venda.valorSoja;
         }
+    }
+    
+
+    public long getQtdDias(){
+        return qtdDias;
+    }
+    
+    public void setQtdDias(long qtdDias) {
+        this.qtdDias = qtdDias;
     }
     
     public String getTipoGrao(){
@@ -99,14 +102,23 @@ public class Venda implements Serializable{
     public void setValorVenda(double valorVenda) {
         this.valorVenda = valorVenda;
     }
+    
+    public long getID(){
+        return ID;
+    }
+    
+    public void setID(long ID) {
+        this.ID = ID;
+    }
+    
+    public String getVendedorNome(){
+        return vendedor.getNome();
+    }
+//    public long getID(){
+//        return ID;
+//    }
+//    
+//    public void setID(long ID) {
+//        this.ID = ID;
+//    }
 }
-
-
-//        if(tipoGrao.equals("Milho")){
-//            valorVenda = qtdSacas*valorMilho;
-//        } else if(tipoGrao.equals("Soja")){
-//            valorVenda = qtdSacas*valorSoja;
-//        } else if(tipoGrao.equals("Trigo")){
-//            valorVenda = qtdSacas*valorTrigo;
-//        }
-//        produtor.devendo = valorVenda;

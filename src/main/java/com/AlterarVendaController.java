@@ -5,33 +5,37 @@
  */
 package com;
 
-import com.modelo.Produtor;
-import com.util.ArquivoProdutor;
+import com.util.ArquivoVenda;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.time.LocalDate;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 /**
  *
  * @author kaiof
  */
-public class ListarProdutorController {
-    @FXML
-    private TextArea campoLista;
+public class AlterarVendaController {
     
     @FXML
-    private void listar(ActionEvent even){
-        ArrayList<Produtor> lista = ArquivoProdutor.listar();
-        for(Produtor u : lista){
-            campoLista.appendText("Nome: " + u.getNome() + "\t\tCPF: " + u.getCPF() + "\t\tEmail: " + u.getEmail() + "\t\tDevendo: R$" + u.getDevendo() + "\n");
-        }
+    private TextField campoID;
+    
+    @FXML
+    private TextField campoData;
+    
+    @FXML
+    private void alterarVenda(ActionEvent even) throws IOException{
+        long id = Long.valueOf(campoID.getText());
+        LocalDate data = LocalDate.parse(campoData.getText());
+        ArquivoVenda.alterar(id,  data);
+        App.setRoot("telaPrincipal");
     }
     
     @FXML
     private void limparCampos(){
-        this.campoLista.setText("");
+        this.campoID.setText("");
+        this.campoData.setText("");
     }
     
     @FXML
@@ -52,7 +56,5 @@ public class ListarProdutorController {
     @FXML
     private void sair(ActionEvent even){
         System.exit(0);
-    }
-
-    
+    } 
 }

@@ -22,11 +22,15 @@ import javafx.scene.control.TextField;
  */
 public class VendaController {
     
+    
     @FXML
     private MenuButton campoGrao;
 
     @FXML
     private TextField cpfProdutor;
+    
+    @FXML
+    private TextField campoID;
 
     @FXML
     private TextField qtdSacas;
@@ -54,16 +58,15 @@ public class VendaController {
     
     @FXML
     private void vender(ActionEvent even) throws IOException{
-        Venda venda = new Venda(campoGrao.getText(), cpfProdutor.getText(), qtdSacas.getText(), dataEntrada.getText(), dataSaida.getText());
-        ArquivoVenda.inserir(venda);
+        Venda venda = new Venda(campoGrao.getText(), cpfProdutor.getText(), qtdSacas.getText(), dataEntrada.getText(), dataSaida.getText(), Long.valueOf(campoID.getText()), TelaPrincipalController.logado);
         ArrayList<Produtor> lista = ArquivoProdutor.listar();
         for(Produtor u : lista){   
-            if(u.getCPF().equals(cpfProdutor)){
-                double valorVenda = venda.getValorVenda();
-                u.setDevendo(valorVenda);
+            if(u.getCPF().equals(cpfProdutor.getText())){
+                u.setDevendoMais(venda.getValorVenda());
                 ArquivoProdutor.alterar(cpfProdutor.getText(), u);
             }
         }
+        ArquivoVenda.inserir(venda);
         App.setRoot("telaPrincipal");
     }
     

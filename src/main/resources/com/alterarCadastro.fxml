@@ -90,6 +90,11 @@
                </font></Text>
             <Button layoutX="326.0" layoutY="305.0" mnemonicParsing="false" onAction="#alterar" prefHeight="25.0" prefWidth="53.0" text="Entrar" />
             <Button layoutX="230.0" layoutY="305.0" mnemonicParsing="false" onAction="#limpar" text="Limpar" />
+            <Text fill="WHITE" layoutX="447.0" layoutY="42.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="Alterar Cadastro Funcionario">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
       </children>
     </AnchorPane>
   </children>

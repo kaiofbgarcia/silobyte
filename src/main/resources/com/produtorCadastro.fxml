@@ -93,6 +93,11 @@
             <Button layoutX="341.0" layoutY="311.0" mnemonicParsing="false" onAction="#cadastrarProdutor" prefHeight="25.0" prefWidth="76.0" text="Cadastrar" />
             <Button layoutX="192.0" layoutY="311.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="76.0" text="Limpar" />
             <Button layoutX="14.0" layoutY="311.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="76.0" text="Voltar" />
+            <Text fill="WHITE" layoutX="453.0" layoutY="47.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="Cadastro de Produtores">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
       </children>
     </AnchorPane>
   </children>

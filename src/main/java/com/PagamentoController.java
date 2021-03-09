@@ -11,31 +11,40 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 /**
  *
  * @author kaiof
  */
-public class ListarProdutorController {
+public class PagamentoController {
     @FXML
-    private TextArea campoLista;
-    
+    private TextField cpfProdutor;
+
     @FXML
-    private void listar(ActionEvent even){
+    private TextField valorRecebido;
+
+    @FXML
+    private void pagar() throws IOException{
+        double valor = Double.parseDouble(valorRecebido.getText());
         ArrayList<Produtor> lista = ArquivoProdutor.listar();
-        for(Produtor u : lista){
-            campoLista.appendText("Nome: " + u.getNome() + "\t\tCPF: " + u.getCPF() + "\t\tEmail: " + u.getEmail() + "\t\tDevendo: R$" + u.getDevendo() + "\n");
+        for(Produtor u : lista){   
+            if(u.getCPF().equals(cpfProdutor.getText())){
+                u.setDevendoMenos(valor);
+                ArquivoProdutor.alterar(cpfProdutor.getText(), u);
+            }
         }
+        App.setRoot("telaPrincipal");
     }
     
     @FXML
     private void limparCampos(){
-        this.campoLista.setText("");
+        this.cpfProdutor.setText("");
+        this.valorRecebido.setText("");
     }
     
     @FXML
-    private void telaPrincipal(ActionEvent even) throws IOException{
+    private void voltar(ActionEvent even) throws IOException{
         App.setRoot("telaPrincipal");
     }
     
@@ -53,6 +62,4 @@ public class ListarProdutorController {
     private void sair(ActionEvent even){
         System.exit(0);
     }
-
-    
 }

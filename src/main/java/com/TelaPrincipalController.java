@@ -10,7 +10,6 @@ import com.util.Arquivo;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.text.Text;
 
 /**
  *
@@ -52,6 +51,16 @@ public class TelaPrincipalController {
     }
     
     @FXML
+    private void pagamento(ActionEvent even) throws IOException{
+        App.setRoot("pagamento");
+    }
+    
+    @FXML
+    private void alterarVenda(ActionEvent even) throws IOException{
+        App.setRoot("alterarVenda");
+    }
+    
+    @FXML
     private void excluirProdutor(ActionEvent even) throws IOException{
         App.setRoot("excluirProdutor");
     }
@@ -59,6 +68,11 @@ public class TelaPrincipalController {
     @FXML
     private void fazerVenda(ActionEvent even) throws IOException{
         App.setRoot("venda");
+    }
+    
+    @FXML
+    private void excluirVenda(ActionEvent even) throws IOException{
+        App.setRoot("excluirVenda");
     }
     
     @FXML

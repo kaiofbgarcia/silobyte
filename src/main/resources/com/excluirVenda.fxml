@@ -36,7 +36,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -44,7 +44,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ListarVendaController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ExcluirVendaController">
   <children>
       <MenuBar>
          <menus>
@@ -69,20 +69,25 @@
                   <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="233.0" layoutY="131.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Lista de Vendas:" textAlignment="CENTER" wrappingWidth="188.419921875">
+            <Text fill="WHITE" layoutX="233.0" layoutY="122.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Excluir Venda:" textAlignment="CENTER" wrappingWidth="188.419921875">
                <font>
                   <Font name="Times New Roman" size="25.0" />
                </font>
             </Text>
-            <TextArea fx:id="campoLista" editable="false" layoutX="59.0" layoutY="148.0" opacity="0.8" prefHeight="145.0" prefWidth="558.0" />
-            <Button layoutX="289.0" layoutY="309.0" mnemonicParsing="false" onAction="#listar" prefHeight="25.0" prefWidth="67.0" text="Listar" />
             <Text fill="#860b0b" layoutX="224.0" layoutY="65.0" stroke="BLACK" strokeType="OUTSIDE" text="SiloByte" textAlignment="CENTER" wrappingWidth="227.21875">
                <font>
                   <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
-            <Button layoutX="501.0" layoutY="309.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="67.0" text="Limpar" />
-            <Button layoutX="87.0" layoutY="309.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="67.0" text="Voltar" />
+            <Button layoutX="233.0" layoutY="309.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="67.0" text="Limpar" />
+            <Button layoutX="38.0" layoutY="309.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="67.0" text="Voltar" />
+            <TextField fx:id="campoID" layoutX="263.0" layoutY="188.0" />
+            <Text fill="WHITE" layoutX="269.0" layoutY="179.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Código da Venda">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="373.0" layoutY="309.0" mnemonicParsing="false" onAction="#excluirVenda" prefHeight="25.0" prefWidth="67.0" text="Excluir" />
          </children></AnchorPane>
   </children>
 </VBox>

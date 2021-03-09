@@ -25,7 +25,7 @@ public class ListarVendaController {
     private void listar(ActionEvent even){
         ArrayList<Venda> lista = ArquivoVenda.listar();
         for(Venda u : lista){
-            campoLista.appendText("CPF: " + u.getCpfProdutor() + "   Tipo do Grão: " + u.getTipoGrao() + "   Data de Entrada: " + u.getDataEntrada() + "\n" +"Data de Saída: " + u.getDataSaida() + "   Quantidade de Sacas: " + u.getQtdSacas() + "   Valor a ser Pago: " + u.getValorVenda() +"\n\n");
+            campoLista.appendText("Codigo da Venda: " + u.getID() + "\t\tVendedor:" + u.getVendedorNome() +"\t\tCPF do Produtor: " + u.getCpfProdutor() + "\n\t\t\tTipo do Grão: " + u.getTipoGrao() + "\n\t\t\tData de Entrada: " + u.getDataEntrada() + "\n\t\t\tData de Saída: " + u.getDataSaida() + "\n\t\t\tQuantidade de Sacas: " + u.getQtdSacas() + "\n\t\t\tValor da Venda: " + u.getValorVenda() +"\n\n");
         }
     }
     
@@ -52,7 +52,5 @@ public class ListarVendaController {
     @FXML
     private void sair(ActionEvent even){
         System.exit(0);
-    }
-
-    
+    } 
 }

@@ -69,7 +69,7 @@
                   <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="226.0" layoutY="121.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Lista de Usuarios:" wrappingWidth="188.419921875">
+            <Text fill="WHITE" layoutX="201.0" layoutY="135.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Lista de Produtores:" textAlignment="CENTER" wrappingWidth="253.419921875">
                <font>
                   <Font name="Times New Roman" size="25.0" />
                </font>
