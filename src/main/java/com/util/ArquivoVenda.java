@@ -64,6 +64,13 @@ public class ArquivoVenda {
         ArrayList<Venda> lista = ArquivoVenda.listar();
         for(Venda u : lista){
             if(u.getID() == ID){
+                ArrayList<Produtor> listaP = ArquivoProdutor.listar();
+                for(Produtor p : listaP){   
+                    if(p.getCPF().equals(u.getCpfProdutor())){
+                        p.setDevendoMenos(u.getValorVenda());
+                        ArquivoProdutor.alterar(u.getCpfProdutor(), p);
+                    }
+                }
                 lista.remove(u);
                 try {
                     FileOutputStream fos = new FileOutputStream(Info.ARQUIVO_VENDA);
@@ -87,19 +94,19 @@ public class ArquivoVenda {
                 u.setDataSaida(dataSaida);
                 long qtdDias = ChronoUnit.DAYS.between(u.getDataEntrada(), u.getDataSaida());
                 if(u.getTipoGrao().equals("Milho")){
-                    u.setValorVenda(u.getQtdSacas()* u.getQtdDias() * Venda.valorMilho);
+                    u.setValorVenda(u.getQtdSacas()* qtdDias * Venda.valorMilho);
                 } else if(u.getTipoGrao().equals("Trigo")){
-                    u.setValorVenda(u.getQtdSacas()* u.getQtdDias() * Venda.valorTrigo);
+                    u.setValorVenda(u.getQtdSacas()* qtdDias * Venda.valorTrigo);
                 } else if(u.getTipoGrao().equals("Soja")){
-                    u.setValorVenda(u.getQtdSacas()* u.getQtdDias() * Venda.valorSoja);
+                    u.setValorVenda(u.getQtdSacas()* qtdDias * Venda.valorSoja);
                 }
                 ArrayList<Produtor> listaP = ArquivoProdutor.listar();
                 for(Produtor p : listaP){   
-                if(p.getCPF().equals(u.getCpfProdutor())){
-                    p.setDevendo(u.getValorVenda());
-                    ArquivoProdutor.alterar(u.getCpfProdutor(), p);
-            }
-        }
+                    if(p.getCPF().equals(u.getCpfProdutor())){
+                        p.setDevendo(u.getValorVenda());
+                        ArquivoProdutor.alterar(u.getCpfProdutor(), p);
+                    }
+                }
                 try {
                     FileOutputStream fos = new FileOutputStream(Info.ARQUIVO_VENDA);
                     ObjectOutputStream oos = new ObjectOutputStream(fos);

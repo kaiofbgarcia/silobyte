@@ -62,12 +62,14 @@ public class ArquivoTest {
 //            System.out.println("Nome:" + u.getNome() + "  CPF:" + u.getCPF() + "  Email:" + u.getEmail());
 //        }
 //    }
-    @org.junit.jupiter.api.Test
-    public void testListarVenda(){
-        ArrayList<Venda> lista = ArquivoVenda.listar();
-        for(Venda u : lista){
-            System.out.println("CPF: " + u.getCpfProdutor() + "   Tipo do Grão: " + u.getTipoGrao() + "   Data de Entrada: " + u.getDataEntrada() + "\n" +"Data de Saída: " + u.getDataSaida() + "   Quantidade de Sacas: " + u.getQtdSacas() + "   Valor a ser Pago: " + u.getValorVenda() +"\n\n");
-        }
-    }
     
+//    @org.junit.jupiter.api.Test
+//    public void testListarVenda(){
+//        ArrayList<Venda> lista = ArquivoVenda.listar();
+//        for(Venda u : lista){
+//            System.out.println("CPF: " + u.getCpfProdutor() + "   Tipo do Grão: " + u.getTipoGrao() + "   Data de Entrada: " + u.getDataEntrada() + "\n" +"Data de Saída: " + u.getDataSaida() + "   Quantidade de Sacas: " + u.getQtdSacas() + "   Valor a ser Pago: " + u.getValorVenda() +"\n\n");
+//            System.out.println(lista.size());
+//        }
+//    }
+//    
 }

@@ -29,12 +29,6 @@ public class Produtor implements Serializable{
         this.nome = nome;
         this.email = email;
     }
-//    public Produtor(String nome, String cpf, String email, Venda venda){
-//        this.cpf = cpf;
-//        this.nome = nome;
-//        this.email = email;
-//        this.venda = venda;
-//    }
     
     public String getCPF(){
         return cpf;

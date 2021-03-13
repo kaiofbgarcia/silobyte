@@ -58,8 +58,10 @@ public class VendaController {
     
     @FXML
     private void vender(ActionEvent even) throws IOException{
-        Venda venda = new Venda(campoGrao.getText(), cpfProdutor.getText(), qtdSacas.getText(), dataEntrada.getText(), dataSaida.getText(), Long.valueOf(campoID.getText()), TelaPrincipalController.logado);
+ 
         ArrayList<Produtor> lista = ArquivoProdutor.listar();
+        
+        Venda venda = new Venda(campoGrao.getText(), cpfProdutor.getText(), qtdSacas.getText(), dataEntrada.getText(), dataSaida.getText(), Long.valueOf(campoID.getText()) , TelaPrincipalController.logado);
         for(Produtor u : lista){   
             if(u.getCPF().equals(cpfProdutor.getText())){
                 u.setDevendoMais(venda.getValorVenda());
