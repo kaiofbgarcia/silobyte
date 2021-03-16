@@ -28,11 +28,10 @@ public class Venda implements Serializable{
     long qtdDias;
     long ID;
   
-    public Venda(String tipoGrao, String cpfProdutor, String qtdSacas, String dataEntrada, String dataSaida, long ID, Usuario vendedor){
+    public Venda(String tipoGrao, String cpfProdutor, String qtdSacas, String dataEntrada, String dataSaida, Usuario vendedor){
         this.tipoGrao = tipoGrao;
         this.cpfProdutor = cpfProdutor;
         this.qtdSacas = Integer.parseInt(qtdSacas);
-        this.ID = ID;
         this.vendedor = vendedor;
         this.dataEntrada = LocalDate.parse(dataEntrada);
         this.dataSaida = LocalDate.parse(dataSaida);
@@ -114,11 +113,4 @@ public class Venda implements Serializable{
     public String getVendedorNome(){
         return vendedor.getNome();
     }
-//    public long getID(){
-//        return ID;
-//    }
-//    
-//    public void setID(long ID) {
-//        this.ID = ID;
-//    }
 }

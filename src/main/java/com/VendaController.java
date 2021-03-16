@@ -57,11 +57,27 @@ public class VendaController {
     }
     
     @FXML
+    private long verificaID(){
+        ArrayList<Venda> lista = ArquivoVenda.listar();
+        long id = 0;
+        
+        if(lista.isEmpty()){
+            return 1;
+        }else{
+            for(Venda u : lista){
+                id = u.getID();
+            }
+            
+            return id+1;
+        }   
+    }
+    
+    @FXML
     private void vender(ActionEvent even) throws IOException{
  
         ArrayList<Produtor> lista = ArquivoProdutor.listar();
-        
-        Venda venda = new Venda(campoGrao.getText(), cpfProdutor.getText(), qtdSacas.getText(), dataEntrada.getText(), dataSaida.getText(), Long.valueOf(campoID.getText()) , TelaPrincipalController.logado);
+        Venda venda = new Venda(campoGrao.getText(), cpfProdutor.getText(), qtdSacas.getText(), dataEntrada.getText(), dataSaida.getText() , TelaPrincipalController.logado);
+        venda.setID(verificaID());
         for(Produtor u : lista){   
             if(u.getCPF().equals(cpfProdutor.getText())){
                 u.setDevendoMais(venda.getValorVenda());

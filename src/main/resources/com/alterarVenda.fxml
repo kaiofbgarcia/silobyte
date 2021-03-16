@@ -69,6 +69,11 @@
                   <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
                </image>
             </ImageView>
+            <TextField fx:id="campoID" layoutX="268.0" layoutY="175.0" />
+            <TextField fx:id="campoData" layoutX="268.0" layoutY="235.0" />
+            <Button layoutX="373.0" layoutY="309.0" mnemonicParsing="false" onAction="#alterarVenda" prefHeight="25.0" prefWidth="67.0" text="Alterar" />
+            <Button layoutX="233.0" layoutY="309.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="67.0" text="Limpar" />
+            <Button layoutX="38.0" layoutY="309.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="67.0" text="Voltar" />
             <Text fill="WHITE" layoutX="243.0" layoutY="130.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Alterar Venda:" textAlignment="CENTER" wrappingWidth="188.419921875">
                <font>
                   <Font name="Times New Roman" size="25.0" />
@@ -79,16 +84,11 @@
                   <Font name="Times New Roman Bold Italic" size="65.0" />
                </font>
             </Text>
-            <Button layoutX="233.0" layoutY="309.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="67.0" text="Limpar" />
-            <Button layoutX="38.0" layoutY="309.0" mnemonicParsing="false" onAction="#telaPrincipal" prefHeight="25.0" prefWidth="67.0" text="Voltar" />
-            <TextField fx:id="campoID" layoutX="268.0" layoutY="175.0" />
             <Text fill="WHITE" layoutX="268.0" layoutY="166.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Código da Venda">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Button layoutX="373.0" layoutY="309.0" mnemonicParsing="false" onAction="#alterarVenda" prefHeight="25.0" prefWidth="67.0" text="Alterar" />
-            <TextField fx:id="campoData" layoutX="268.0" layoutY="235.0" />
             <Text fill="WHITE" layoutX="267.0" layoutY="224.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Nova data de Saída">
                <font>
                   <Font size="14.0" />
