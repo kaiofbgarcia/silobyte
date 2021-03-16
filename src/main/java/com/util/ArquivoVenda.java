@@ -67,8 +67,13 @@ public class ArquivoVenda {
                 ArrayList<Produtor> listaP = ArquivoProdutor.listar();
                 for(Produtor p : listaP){   
                     if(p.getCPF().equals(u.getCpfProdutor())){
-                        p.setDevendoMenos(u.getValorVenda());
-                        ArquivoProdutor.alterar(u.getCpfProdutor(), p);
+                        if(p.getDevendo()>=u.getValorVenda()){
+                            p.setDevendoMenos(u.getValorVenda());
+                            ArquivoProdutor.alterar(u.getCpfProdutor(), p);
+                        } else{
+                            p.setDevendo(0);
+                            ArquivoProdutor.alterar(u.getCpfProdutor(), p);
+                        }
                     }
                 }
                 lista.remove(u);
