@@ -94,6 +94,11 @@
                   <Font size="14.0" />
                </font>
             </Text>
+            <Text fill="WHITE" layoutX="521.0" layoutY="48.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="Alterar Venda">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
   </children>
 </VBox>

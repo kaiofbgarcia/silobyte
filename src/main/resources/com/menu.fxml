@@ -87,6 +87,11 @@
             <Button layoutX="297.0" layoutY="253.0" mnemonicParsing="false" onAction="#entrar" text="Entrar" />
             <Text fill="WHITE" layoutX="284.0" layoutY="121.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Tela de Login" />
             <Text fx:id="erroLogin" fill="#9a0000" layoutX="250.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" textOrigin="CENTER" />
+            <Text fill="WHITE" layoutX="561.0" layoutY="42.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="Menu">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
   </children>
 </VBox>

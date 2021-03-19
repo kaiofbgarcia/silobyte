@@ -68,7 +68,7 @@
                   <Image url="@../../java/com/util/shutterstock_451718692.jpg" />
                </image>
             </ImageView>
-            <Text fill="WHITE" layoutX="226.0" layoutY="121.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Lista de Usuarios:" wrappingWidth="188.419921875">
+            <Text fill="WHITE" layoutX="206.0" layoutY="139.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="1.5" text="Lista de Funcionários:" wrappingWidth="299.419921875">
                <font>
                   <Font name="Times New Roman" size="25.0" />
                </font>
@@ -82,6 +82,11 @@
             </Text>
             <Button layoutX="224.0" layoutY="320.0" mnemonicParsing="false" onAction="#menu" prefHeight="25.0" prefWidth="64.0" text="Voltar" />
             <Button layoutX="360.0" layoutY="320.0" mnemonicParsing="false" onAction="#limparCampos" prefHeight="25.0" prefWidth="64.0" text="Limpar" />
+            <Text fill="WHITE" layoutX="505.0" layoutY="48.0" stroke="#434343" strokeType="OUTSIDE" strokeWidth="1.5" text="Listar Funcionários">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
   </children>
 </VBox>
